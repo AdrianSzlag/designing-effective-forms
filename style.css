@@ -1,3 +1,15 @@
 .modal {
     background: #c6d0ff7a;
 }
+
+label:not(.form-check-label) {
+    font-weight: bold;
+}
+
+h5 {
+    top: -15px;
+    left: 8px;
+    background-color: white;
+    padding: 0 8px;
+    color: rgb(71, 71, 71);
+}
