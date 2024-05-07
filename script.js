@@ -67,7 +67,6 @@ async function injectCountriesPhoneCodes() {
     try {
         const response = await fetch('https://restcountries.com/v3.1/all');
         const data = await response.json();
-        console.log(data);
 
         const countries = data.sort((a, b) => {
             return a.name.common.localeCompare(b.name.common);
@@ -109,7 +108,7 @@ invoiceData.addEventListener('focus', () => {
     document.addEventListener('click', handleClick);
 
     await injectCountriesPhoneCodes();
-    fetchAndFillCountries();
+    await fetchAndFillCountries();
     getCountryByIP();
 })()
 
